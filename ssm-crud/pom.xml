@@ -4,7 +4,16 @@
 	<artifactId>ssm-crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-  
+
+	<!-- 引入项目依赖的jar包 -->
+	<dependencies>
+		<!-- SpringMVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
