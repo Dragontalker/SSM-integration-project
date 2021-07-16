@@ -20,6 +20,6 @@
 <body>
 	Home Page
 	<hr>
-	<button>按钮</button>
+	<button class="btn btn-success">按钮</button>
 </body>
 </html>
