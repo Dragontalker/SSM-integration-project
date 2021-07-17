@@ -21,9 +21,8 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <!-- 指定javaBean生成的位置 -->
-        <javaModelGenerator targetPackage="com.ssmcrud.bean"
-                            targetProject=".\src\main\java">
+        <!-- 指定JavaBean生成的位置 -->
+        <javaModelGenerator targetPackage="com.dragontalker.bean" targetProject=".\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
