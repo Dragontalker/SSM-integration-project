@@ -71,6 +71,20 @@
   </sql>
   
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
+  <select id="selectByExampleWithDept">
+  	select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tbl_emp
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
   
   <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
     
