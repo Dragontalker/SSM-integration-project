@@ -1,5 +1,6 @@
 package com.dragontalker.test;
 
+import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +20,12 @@ public class MapperTest {
 	@Autowired
 	EmployeeMapper employeeMapper;
 	
+	@Autowired
+	SqlSession sqlSession;
+	
 	@Test
 	public void testCRUD() {
 	
-		System.out.println(departmentMapper);
-		
-		// 1. test insert
-		//Department dept1 = new Department(null, "Development");
-		//departmentMapper.insertSelective(dept1);
-		
-		//Department dept2 = new Department(null, "Test");
-		//departmentMapper.insertSelective(dept2);
-		
-		// 2. test insert employee
-		//Employee emp1 = new Employee(null, "Jerry", "M", "jerry@atguigu.com", 1);
-		//employeeMapper.insertSelective(emp1);
-		
 		// 3. batch insert
 		
 	}
