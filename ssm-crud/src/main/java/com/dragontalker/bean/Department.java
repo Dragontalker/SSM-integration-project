@@ -4,8 +4,17 @@ public class Department {
     private Integer deptId;
 
     private String deptName;
+    
+    public Department() {
+    	
+    }
 
-    public Integer getDeptId() {
+    public Department(Integer deptId, String deptName) {
+		this.deptId = deptId;
+		this.deptName = deptName;
+	}
+
+	public Integer getDeptId() {
         return deptId;
     }
 

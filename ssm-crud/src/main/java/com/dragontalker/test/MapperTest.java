@@ -19,5 +19,8 @@ public class MapperTest {
 	public void testCRUD() {
 	
 		System.out.println(departmentMapper);
+		
+		// 1. test insert
+		
 	}
 }
