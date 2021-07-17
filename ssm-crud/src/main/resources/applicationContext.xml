@@ -14,7 +14,7 @@
     </context:component-scan>
 
     <!-- Spring的配置文件，这里主要配置和业务逻辑有关的 -->
-    <!-- 数据源，事务控制-->
+    <!-- ====================数据源，事务控制====================-->
     <context:property-placeholder location="classpath:dbconfig.properties" />
     <bean id="pooledDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="jdbcUrl" value="${jdbc.jdbcUrl}" />
@@ -22,6 +22,7 @@
         <property name="user" value="${jdbc.user}" />
         <property name="password" value="${jdbc.password}" />
     </bean>
+    <!-- =====================================================  -->
     
     <!-- ==================配置和MyBatis的整合================== -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
