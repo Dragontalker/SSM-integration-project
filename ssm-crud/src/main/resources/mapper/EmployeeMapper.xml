@@ -69,6 +69,11 @@
   <sql id="Base_Column_List">
     emp_id, emp_name, gender, email, d_id
   </sql>
+  
+  <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
+  
+  <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
+    
   <select id="selectByExample" parameterType="com.dragontalker.crud.bean.EmployeeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
