@@ -71,8 +71,10 @@
   </sql>
   
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
-
-  <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->  
+  <select id="selectByExampleWithDept"></select>
+  
+  <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
+  <select id="selectByPrimaryKeyWithDept"></select>  
   
   <select id="selectByExample" parameterType="com.dragontalker.bean.EmployeeExample" resultMap="BaseResultMap">
     select
