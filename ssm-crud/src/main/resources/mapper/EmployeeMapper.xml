@@ -69,6 +69,9 @@
   <sql id="Base_Column_List">
     emp_id, emp_name, gender, email, d_id
   </sql>
+  
+  
+  
   <select id="selectByExample" parameterType="com.dragontalker.bean.EmployeeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
