@@ -90,6 +90,20 @@
   </select>
   
   <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
+  <select id="selectByPrimaryKeyWithDept" resultMap="">
+  	select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tbl_emp e left join tbl_dept d on e.`d_did`=d.`dept_id`
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
     
   <select id="selectByExample" parameterType="com.dragontalker.crud.bean.EmployeeExample" resultMap="BaseResultMap">
     select
