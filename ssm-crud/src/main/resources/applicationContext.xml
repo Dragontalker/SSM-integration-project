@@ -62,6 +62,6 @@
         </tx:attributes>
     </tx:advice>
 
-    <!-- Spring配置文件的核心点（数据源、与mybatis的整合，事务控制） -->
+    <!-- Spring配置文件的核心点（数据源、与MyBatis的整合，事务控制） -->
 
 </beans>
