@@ -1,5 +1,7 @@
 package com.dragontalker.test;
 
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.dragontalker.bean.Employee;
 import com.github.pagehelper.PageInfo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -48,6 +51,12 @@ public class MvcTest {
 		int[] nums = pi.getNavigatepageNums();
 		for (int i : nums) {
 			System.out.print(" " + i);
+		}
+		
+		List<Employee> list = pi.getList();
+		for (Employee employee : list) {
+			System.out.println(">> ID: " + employee.getEmpId());
+			System.out.println(">> Name: " + employee.getEmpName());
 		}
 	}
 }
