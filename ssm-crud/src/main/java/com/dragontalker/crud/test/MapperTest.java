@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.dragontalker.crud.dao.DepartmentMapper;
+
 public class MapperTest {
 
 	/**
@@ -17,5 +19,6 @@ public class MapperTest {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// 2. Get bean from container
+		ioc.getBean(DepartmentMapper.class);
 	}
 }
