@@ -69,6 +69,7 @@
   <sql id="Base_Column_List">
     emp_id, emp_name, gender, email, d_id
   </sql>
+  
   <sql id="Dept_Column_List">
     emp_id, emp_name, gender, email, d_id dept_id, dept_name
   </sql>
@@ -79,7 +80,7 @@
     <if test="distinct">
       distinct
     </if>
-    <include refid="Base_Column_List" />
+    <include refid="Dept_Column_List" />
     from tbl_emp
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
