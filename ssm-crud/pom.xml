@@ -73,6 +73,7 @@
 		</dependency>
 		
 		<!-- MyBatis -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
