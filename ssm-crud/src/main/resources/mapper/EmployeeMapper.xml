@@ -70,7 +70,7 @@
     emp_id, emp_name, gender, email, d_id
   </sql>
   <sql id="WithDept_Column_List">
-  	emp_id, emp_name, gender, email, d_id, dept_id, dept_name
+  	e.emp_id, e.emp_name, e.gender, e.email, e.d_id, d.dept_id, d.dept_name
   </sql>
   
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
@@ -80,7 +80,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from tbl_emp left join tbl_dept on tbl_emp.`d_did`=tbl_dept.`dept_id`
+    from tbl_emp e left join tbl_dept d on e.`d_did`=d.`dept_id`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
