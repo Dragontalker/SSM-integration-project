@@ -10,7 +10,14 @@
   </resultMap>
   
   <!-- resultMap for Employee selectByPrimaryKeyWithDept(Integer empId); -->
-  <resultMap type="" id="WithDept"></resultMap>
+  <resultMap type="com.dragontalker.crud.bean" id="WithDeptResultMap">
+  	<id column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="d_id" jdbcType="INTEGER" property="dId" />
+    <result property="department" javaType="com.dragontalker.crud.bean.Department"/>
+  </resultMap>
   
   <sql id="Example_Where_Clause">
     <where>
