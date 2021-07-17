@@ -1,13 +1,13 @@
 package com.dragontalker.crud.test;
 
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.dragontalker.crud.dao.DepartmentMapper;
 
-@ContextConfiguration
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 public class MapperTest {
 
 	/**
@@ -16,11 +16,6 @@ public class MapperTest {
 	@Test
 	public void testCRUD() {
 		
-		// 1. Create Spring IOC container
-		ApplicationContext ioc = 
-				new ClassPathXmlApplicationContext("applicationContext.xml");
-		
-		// 2. Get bean from container
-		ioc.getBean(DepartmentMapper.class);
+
 	}
 }
