@@ -9,7 +9,7 @@
     <result column="d_id" jdbcType="INTEGER" property="dId" />
   </resultMap>
   
-  <!-- resultMap with dept -->
+  <!-- resultMap with department -->
   <resultMap id="WithDeptResultMap" type="com.dragontalker.bean.Employee">
     <id column="emp_id" jdbcType="INTEGER" property="empId" />
     <result column="emp_name" jdbcType="VARCHAR" property="empName" />
@@ -84,7 +84,7 @@
     emp_id, emp_name, gender, email, d_id
   </sql>
   
-  <!-- select SQL with dept --> 
+  <!-- select SQL with department --> 
   <sql id="WithDept_Column_List">
     e.emp_id, e.emp_name, e.gender, e.email, e.d_id d.dept_id, d.dept_name
   </sql>
@@ -106,7 +106,7 @@
   </select>
   
   <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
-  <select id="selectByPrimaryKeyWithDept" resultMap="">
+  <select id="selectByPrimaryKeyWithDept" resultMap="WithDeptResultMap">
   	select 
     <include refid="WithDept_Column_List" />
     from tbl_emp e left join tbl_dept d on e.`d_id`=d.`dept_id`
