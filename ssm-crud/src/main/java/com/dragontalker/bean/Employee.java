@@ -12,8 +12,20 @@ public class Employee {
     private Integer dId;
     
     private Department department;
+    
+    public Employee() {
+    	
+    }
 
-    public Department getDepartment() {
+    public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.email = email;
+		this.dId = dId;
+	}
+
+	public Department getDepartment() {
 		return department;
 	}
 

@@ -33,5 +33,7 @@ public class MapperTest {
 		//departmentMapper.insertSelective(dept2);
 		
 		// 2. test insert employee
+		
+		
 	}
 }
