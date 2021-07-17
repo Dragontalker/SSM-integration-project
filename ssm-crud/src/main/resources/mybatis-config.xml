@@ -10,7 +10,7 @@
 	</settings>
 	
 	<typeAliases>
-		<package name="com.dragontalker.crud.bean"/>
+		<package name="com.dragontalker.bean"/>
 	</typeAliases>
 	
 </configuration>
