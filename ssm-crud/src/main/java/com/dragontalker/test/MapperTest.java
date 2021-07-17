@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.dragontalker.bean.Department;
-import com.dragontalker.bean.Employee;
 import com.dragontalker.dao.DepartmentMapper;
 import com.dragontalker.dao.EmployeeMapper;
 
