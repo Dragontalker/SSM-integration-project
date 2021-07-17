@@ -105,6 +105,7 @@
 		</dependency>
 		
 		<!-- JSTL -->
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
 		<dependency>
 		    <groupId>jstl</groupId>
 		    <artifactId>jstl</artifactId>
