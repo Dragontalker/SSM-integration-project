@@ -104,7 +104,7 @@
   </select>
   
   <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->
-  <select id="selectByPrimaryKeyWithDept" resultMap="">
+  <select id="selectByPrimaryKeyWithDept" resultMap="WithDeptResultMap">
   	select
     <if test="distinct">
       distinct
