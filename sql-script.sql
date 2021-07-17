@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS ssm_crud;
+CREATE DATABASE ssm_crud;
+USE ssm_crud;
