@@ -55,7 +55,7 @@
     <!--开启基于注解的事务，使用XML配置形式的事务（必要主要的都是使用配置式）  -->
     <aop:config>
         <!-- 切入点表达式 -->
-        <aop:pointcut expression="execution(* com.dragontalker.service..*(..))" id="txPoint"/>
+        <aop:pointcut expression="execution(* com.ssmcrud.service..*(..))" id="txPoint"/>
         <!-- 配置事务增强 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
     </aop:config>
