@@ -29,7 +29,7 @@ public class EmployeeController {
 		
 		List<Employee> emps = employeeService.getAll();
 		
-		PageInfo page = new PageInfo(emps);
+		PageInfo page = new PageInfo(emps, 5);
 		
 		model.addAttribute("pageInfo", page);
 		
