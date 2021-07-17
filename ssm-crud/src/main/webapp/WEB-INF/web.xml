@@ -19,13 +19,13 @@
 	<!-- 2. SpringMVC的前端控制器, 拦截所有请求 -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
 	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+    	<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 	<!-- 3. 字符编码过滤器, 一定要放在所有过滤器之前 -->
