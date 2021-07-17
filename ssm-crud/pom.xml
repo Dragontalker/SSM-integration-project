@@ -81,6 +81,7 @@
 		</dependency>
 		
 		<!-- MyBatis整合Spring的适配包 -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
