@@ -26,17 +26,23 @@
     
     <!-- ==================配置和MyBatis的整合================== -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <!-- 指定MyBatis全局配置文件的位置 -->
+        <!-- 指定mybatis全局配置文件的位置 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="dataSource" ref="pooledDataSource"></property>
-        <!-- 指定MyBatis，Mapper文件的位置 -->
+        <!-- 指定mybatis，mapper文件的位置 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>
 
     <!-- 配置扫描器，将MyBatis接口的实现加入到IOC容器中 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <!--扫描所有DAO接口的实现，加入到IOC容器中 -->
+        <!--扫描所有dao接口的实现，加入到ioc容器中 -->
         <property name="basePackage" value="com.dragontalker.dao"></property>
+    </bean>
+    
+    <!-- 配置一个可以执行批量的sqlSession -->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+        <constructor-arg name="executorType" value="BATCH"></constructor-arg>
     </bean>
     <!--  ====================================================-  -->
 
