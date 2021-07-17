@@ -4,5 +4,9 @@
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		 id="WebApp_ID" version="2.5" >
 		 
-		 
+	<!-- 1. 启动Spring的容器 -->
+	<!-- Bootstrap the root web application context before -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener> 
 </web-app>
