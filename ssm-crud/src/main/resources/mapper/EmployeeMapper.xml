@@ -16,7 +16,10 @@
     <result column="gender" jdbcType="CHAR" property="gender" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="d_id" jdbcType="INTEGER" property="dId" />
-    <result property="department" javaType="com.dragontalker.crud.bean.Department"/>
+    <association property="department" javaType="com.dragontalker.crud.bean.Department">
+    	<id column="dept_id" property="deptId"/>
+    	<result column="dept_name" property="deptName" />
+    </association>
   </resultMap>
   
   <sql id="Example_Where_Clause">
