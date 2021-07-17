@@ -5,6 +5,12 @@
 		 id="WebApp_ID" version="2.5" >
 		 
 	<!-- 1. 启动Spring的容器 -->
+	<!-- needed for ContextLoaderListener -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	
 	<!-- Bootstrap the root web application context before -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
