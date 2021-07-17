@@ -69,6 +69,9 @@
   <sql id="Base_Column_List">
     emp_id, emp_name, gender, email, d_id
   </sql>
+  <sql id="Dept_Column_List">
+    emp_id, emp_name, gender, email, d_id dept_id, dept_name
+  </sql>
   
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
   <select id="selectByExampleWithDept">
