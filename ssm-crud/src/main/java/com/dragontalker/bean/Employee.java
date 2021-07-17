@@ -1,4 +1,4 @@
-package com.dragontalker.crud.bean;
+package com.dragontalker.bean;
 
 public class Employee {
     private Integer empId;

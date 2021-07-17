@@ -1,4 +1,4 @@
-package com.dragontalker.crud.bean;
+package com.dragontalker.bean;
 
 import java.util.ArrayList;
 import java.util.List;

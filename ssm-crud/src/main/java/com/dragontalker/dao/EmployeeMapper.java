@@ -1,9 +1,10 @@
-package com.dragontalker.crud.dao;
+package com.dragontalker.dao;
 
-import com.dragontalker.crud.bean.Employee;
-import com.dragontalker.crud.bean.EmployeeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.dragontalker.bean.Employee;
+import com.dragontalker.bean.EmployeeExample;
 
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);

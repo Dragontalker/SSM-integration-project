@@ -1,4 +1,4 @@
-package com.dragontalker.crud.test;
+package com.dragontalker.test;
 
 import java.io.File;
 import java.util.ArrayList;

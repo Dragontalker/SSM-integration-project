@@ -1,9 +1,10 @@
-package com.dragontalker.crud.dao;
+package com.dragontalker.dao;
 
-import com.dragontalker.crud.bean.Department;
-import com.dragontalker.crud.bean.DepartmentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.dragontalker.bean.Department;
+import com.dragontalker.bean.DepartmentExample;
 
 public interface DepartmentMapper {
     long countByExample(DepartmentExample example);
