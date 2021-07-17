@@ -2,13 +2,20 @@ package com.dragontalker.service;
 
 import java.util.List;
 
-import com.dragontalker.bean.Employee;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.dragontalker.bean.Employee;
+import com.dragontalker.dao.EmployeeMapper;
+
+@Service
 public class EmployeeService {
+	
+	@Autowired
+	EmployeeMapper employeeMapper;
 
 	public List<Employee> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return employeeMapper.selectByExampleWithDept(null);
 	}
 
 }
