@@ -70,8 +70,9 @@
     emp_id, emp_name, gender, email, d_id
   </sql>
   
+  <!-- select SQL with dept --> 
   <sql id="WithDept_Column_List">
-    emp_id, emp_name, gender, email, d_id dept_id, dept_name
+    e.emp_id, e.emp_name, e.gender, e.email, e.d_id d.dept_id, d.dept_name
   </sql>
   
   <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
