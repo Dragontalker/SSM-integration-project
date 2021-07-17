@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.dragontalker.bean.Department;
+import com.dragontalker.bean.Employee;
 import com.dragontalker.dao.DepartmentMapper;
 import com.dragontalker.dao.EmployeeMapper;
 
@@ -33,7 +34,10 @@ public class MapperTest {
 		//departmentMapper.insertSelective(dept2);
 		
 		// 2. test insert employee
+		//Employee emp1 = new Employee(null, "Jerry", "M", "jerry@atguigu.com", 1);
+		//employeeMapper.insertSelective(emp1);
 		
+		// 3. batch insert
 		
 	}
 }
