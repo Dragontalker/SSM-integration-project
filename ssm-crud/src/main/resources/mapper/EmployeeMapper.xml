@@ -70,7 +70,9 @@
     emp_id, emp_name, gender, email, d_id
   </sql>
   
-  
+  <!-- List<Employee> selectByExampleWithDept(EmployeeExample example); -->
+
+  <!-- Employee selectByPrimaryKeyWithDept(Integer empId); -->  
   
   <select id="selectByExample" parameterType="com.dragontalker.bean.EmployeeExample" resultMap="BaseResultMap">
     select
