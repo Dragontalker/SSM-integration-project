@@ -4,15 +4,18 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
         
 <generatorConfiguration>
-<context id="DB2Tables" targetRuntime="MyBatis3">
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
+        
         <!-- 配置数据库连接 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/ssm_crud" userId="root"
-                        password="123456">
-        </jdbcConnection>
+        <jdbcConnection 
+        	driverClass="com.mysql.jdbc.Driver"
+        	connectionURL="jdbc:mysql://localhost:3306/ssm_crud" 
+        	userId="root"
+        	password="root" />
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
