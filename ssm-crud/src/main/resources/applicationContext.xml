@@ -4,4 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Spring的配置文件, 这个主要和业务逻辑有关 -->
+	<!-- 数据源, 事务控制 -->
+	<bean id="pooledDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="jdbcUrl" value=""/>
+		<property name="driverClass" value=""/>
+		<property name="user" value=""/>
+		<property name="password" value=""/>
+	</bean>
 </beans>
