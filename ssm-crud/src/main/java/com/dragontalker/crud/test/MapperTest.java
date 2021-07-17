@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.dragontalker.crud.dao.DepartmentMapper;
 
+
 public class MapperTest {
 
 	/**

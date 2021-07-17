@@ -21,6 +21,13 @@
 			<version>4.3.7.RELEASE</version>
 		</dependency>
 		
+		<!-- Spring-Test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+		
 		<!-- Spring-面向切面编程 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
