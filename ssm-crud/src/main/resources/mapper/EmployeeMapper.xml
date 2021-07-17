@@ -81,7 +81,7 @@
       distinct
     </if>
     <include refid="Dept_Column_List" />
-    from tbl_emp
+    from tbl_emp e left join tbl_dept d on e.`d_id`=d.`dept_id`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
