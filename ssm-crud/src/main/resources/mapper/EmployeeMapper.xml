@@ -8,6 +8,20 @@
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="d_id" jdbcType="INTEGER" property="dId" />
   </resultMap>
+  
+  <!-- resultMap with dept -->
+  <resultMap id="WithDeptResultMap" type="com.dragontalker.bean.Employee">
+    <id column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="d_id" jdbcType="INTEGER" property="dId" />
+    <association property="department" javaType="com.dragontalker.bean.Department">
+    	<id column="dept_id" property="deptId"/>
+    	<result column="dept_name" property="deptName"/>
+    </association>
+  </resultMap>
+  
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
