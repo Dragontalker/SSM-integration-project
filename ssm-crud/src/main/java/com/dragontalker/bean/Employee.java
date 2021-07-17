@@ -10,8 +10,18 @@ public class Employee {
     private String email;
 
     private Integer dId;
+    
+    private Department department;
 
-    public Integer getEmpId() {
+    public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public Integer getEmpId() {
         return empId;
     }
 
