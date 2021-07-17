@@ -23,7 +23,7 @@
         <property name="password" value="${jdbc.password}" />
     </bean>
     
-    <!-- 配置和MyBatis的整合 -->
+    <!-- ==================配置和MyBatis的整合================== -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 指定MyBatis全局配置文件的位置 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
@@ -37,8 +37,9 @@
         <!--扫描所有DAO接口的实现，加入到IOC容器中 -->
         <property name="basePackage" value="com.dragontalker.dao"></property>
     </bean>
+    <!--  ====================================================-  -->
 
-    <!-- 事务控制的配置 -->
+    <!-- =====================事务控制的配置===================== -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!--控制住数据源  -->
         <property name="dataSource" ref="pooledDataSource"></property>
@@ -61,6 +62,7 @@
             <tx:method name="get*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+	<!--  ====================================================-  -->
 
     <!-- Spring配置文件的核心点（数据源、与MyBatis的整合，事务控制） -->
 
