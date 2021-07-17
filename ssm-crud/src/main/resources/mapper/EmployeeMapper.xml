@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dragontalker.crud.dao.EmployeeMapper">
-  <resultMap id="BaseResultMap" type="com.dragontalker.crud.bean.Employee">
+<mapper namespace="com.dragontalker.dao.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="com.dragontalker.bean.Employee">
     <id column="emp_id" jdbcType="INTEGER" property="empId" />
     <result column="emp_name" jdbcType="VARCHAR" property="empName" />
     <result column="gender" jdbcType="CHAR" property="gender" />
@@ -10,13 +10,13 @@
   </resultMap>
   
   <!-- resultMap for Employee selectByPrimaryKeyWithDept(Integer empId); -->
-  <resultMap type="com.dragontalker.crud.bean" id="WithDeptResultMap">
+  <resultMap type="com.dragontalker.bean" id="WithDeptResultMap">
   	<id column="emp_id" jdbcType="INTEGER" property="empId" />
     <result column="emp_name" jdbcType="VARCHAR" property="empName" />
     <result column="gender" jdbcType="CHAR" property="gender" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="d_id" jdbcType="INTEGER" property="dId" />
-    <association property="department" javaType="com.dragontalker.crud.bean.Department">
+    <association property="department" javaType="com.dragontalker.bean.Department">
     	<id column="dept_id" property="deptId"/>
     	<result column="dept_name" property="deptName" />
     </association>
@@ -111,7 +111,7 @@
     where emp_id = #{empId,jdbcType=INTEGER}
   </select>
     
-  <select id="selectByExample" parameterType="com.dragontalker.crud.bean.EmployeeExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.dragontalker.bean.EmployeeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -135,19 +135,19 @@
     delete from tbl_emp
     where emp_id = #{empId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.dragontalker.crud.bean.EmployeeExample">
+  <delete id="deleteByExample" parameterType="com.dragontalker.bean.EmployeeExample">
     delete from tbl_emp
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.dragontalker.crud.bean.Employee">
+  <insert id="insert" parameterType="com.dragontalker.bean.Employee">
     insert into tbl_emp (emp_id, emp_name, gender, 
       email, d_id)
     values (#{empId,jdbcType=INTEGER}, #{empName,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, 
       #{email,jdbcType=VARCHAR}, #{dId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.dragontalker.crud.bean.Employee">
+  <insert id="insertSelective" parameterType="com.dragontalker.bean.Employee">
     insert into tbl_emp
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="empId != null">
@@ -184,7 +184,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.dragontalker.crud.bean.EmployeeExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.dragontalker.bean.EmployeeExample" resultType="java.lang.Long">
     select count(*) from tbl_emp
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -224,7 +224,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.dragontalker.crud.bean.Employee">
+  <update id="updateByPrimaryKeySelective" parameterType="com.dragontalker.bean.Employee">
     update tbl_emp
     <set>
       <if test="empName != null">
@@ -242,7 +242,7 @@
     </set>
     where emp_id = #{empId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.dragontalker.crud.bean.Employee">
+  <update id="updateByPrimaryKey" parameterType="com.dragontalker.bean.Employee">
     update tbl_emp
     set emp_name = #{empName,jdbcType=VARCHAR},
       gender = #{gender,jdbcType=CHAR},
